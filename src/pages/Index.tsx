@@ -294,31 +294,24 @@ export default function Index() {
                 <CardContent className="space-y-6">
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <Icon name="Mail" size={20} className="text-primary mt-1" />
-                      <div>
-                        <div className="font-semibold">Email</div>
-                        <div className="text-muted-foreground">events@company.ru</div>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
                       <Icon name="Phone" size={20} className="text-primary mt-1" />
                       <div>
                         <div className="font-semibold">Телефон</div>
-                        <div className="text-muted-foreground">+7 (xxx) xxx-xx-xx</div>
+                        <div className="text-muted-foreground">+7 (908) 955-13-64</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Icon name="MapPin" size={20} className="text-primary mt-1" />
                       <div>
                         <div className="font-semibold">Основная площадка</div>
-                        <div className="text-muted-foreground">Офис компании</div>
+                        <div className="text-muted-foreground">ауд.2.8</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Icon name="Users" size={20} className="text-primary mt-1" />
                       <div>
                         <div className="font-semibold">Организационный комитет</div>
-                        <div className="text-muted-foreground">Отдел по работе с персоналом</div>
+                        <div className="text-muted-foreground">ПРОФКОМ</div>
                       </div>
                     </div>
                   </div>
