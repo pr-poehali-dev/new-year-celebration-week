@@ -162,9 +162,7 @@ export default function Index() {
                         {event.activities.slice(0, 2).map((activity, i) => (
                           <div key={i} className="flex items-start gap-2 text-sm">
                             <Icon name="Clock" size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                            <span className="text-muted-foreground">
-                              {activity.time} - {activity.title}
-                            </span>
+                            <span className="text-muted-foreground">12.30 Мастер-класс по созданию новогодних украшений (из бересты)</span>
                           </div>
                         ))}
                       </div>
