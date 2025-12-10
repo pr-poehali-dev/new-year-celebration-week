@@ -118,7 +118,7 @@ export default function Index() {
 
         <div className="container mx-auto px-4 py-8 max-w-7xl">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto mb-8 bg-white/90 backdrop-blur">
+            <TabsList className="grid w-full grid-cols-5 max-w-3xl mx-auto mb-8 bg-white/90 backdrop-blur">
               <TabsTrigger value="calendar" className="flex items-center gap-2">
                 <Icon name="Calendar" size={18} />
                 <span className="hidden sm:inline">Календарь</span>
@@ -130,6 +130,10 @@ export default function Index() {
               <TabsTrigger value="subscribe" className="flex items-center gap-2">
                 <Icon name="Bell" size={18} />
                 <span className="hidden sm:inline">Подписка</span>
+              </TabsTrigger>
+              <TabsTrigger value="photos" className="flex items-center gap-2">
+                <Icon name="Camera" size={18} />
+                <span className="hidden sm:inline">Фото</span>
               </TabsTrigger>
               <TabsTrigger value="contacts" className="flex items-center gap-2">
                 <Icon name="Phone" size={18} />
@@ -286,6 +290,27 @@ export default function Index() {
                         <span>Информация о месте проведения и времени</span>
                       </li>
                     </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="photos" className="space-y-6">
+              <Card className="bg-white/95 backdrop-blur max-w-4xl mx-auto">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-accent">
+                    <Icon name="Camera" size={24} />
+                    Фото с мероприятий
+                  </CardTitle>
+                  <CardDescription>
+                    Яркие моменты предновогодней недели
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-center py-12">
+                    <Icon name="Image" size={64} className="text-muted-foreground/30 mx-auto mb-4" />
+                    <p className="text-muted-foreground text-lg mb-2">Фотографии появятся после проведения мероприятий</p>
+                    <p className="text-sm text-muted-foreground">Следите за обновлениями!</p>
                   </div>
                 </CardContent>
               </Card>
