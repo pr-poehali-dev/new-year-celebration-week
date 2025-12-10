@@ -15,7 +15,7 @@ const events = [
     title: "День новогоднего настроения",
     icon: "Sparkles",
     activities: [
-      { time: "15:00", title: "Смотр оформления кабинетов", location: "Офис", description: "Оценка праздничного оформления всех кабинетов" },
+      { time: "15:00", title: "Смотр оформления кабинетов", location: "Офис", description: "Оценка праздничного оформления всех кабинетов", fileUrl: "https://cdn.poehali.dev/files/Оценочный лист.jpg", fileName: "Критерии оценки" },
       { time: "13:30", title: "Мастер-класс по созданию новогодних украшений", location: "Банкетный зал", description: "Создание оригинальных украшений из бересты своими руками. Результаты украсят офис!" }
     ]
   },
@@ -210,6 +210,17 @@ export default function Index() {
                                   {activity.location}
                                 </div>
                                 <p className="text-sm text-muted-foreground">{activity.description}</p>
+                                {activity.fileUrl && (
+                                  <a
+                                    href={activity.fileUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 mt-3 text-sm text-primary hover:text-primary/80 font-medium transition-colors"
+                                  >
+                                    <Icon name="FileText" size={16} />
+                                    {activity.fileName || 'Открыть файл'}
+                                  </a>
+                                )}
                               </div>
                             ))}
                           </div>
@@ -368,6 +379,17 @@ export default function Index() {
                   <span>{activity.location}</span>
                 </div>
                 <p className="text-muted-foreground">{activity.description}</p>
+                {activity.fileUrl && (
+                  <a
+                    href={activity.fileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-3 text-primary hover:text-primary/80 font-medium transition-colors"
+                  >
+                    <Icon name="FileText" size={18} />
+                    {activity.fileName || 'Открыть файл'}
+                  </a>
+                )}
               </div>
             ))}
           </div>
